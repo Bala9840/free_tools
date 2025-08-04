@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+﻿import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import PdfToWord from './tools/PdfToWord';
+import PdfToExcel from './tools/PdfToExcel';
+import WordToPdf from './tools/WordToPdf';
+import ImageCompressor from './tools/image/ImageCompressor';
+import BgRemover from './tools/image/BgRemover';
+import LoremIpsumGenerator from './tools/text/LoremIpsumGenerator';
+import PasswordGenerator from './tools/text/PasswordGenerator';
+import UnitConverter from './tools/utils/UnitConverter';
+import CurrencyConverter from './tools/utils/CurrencyConverter';
+import './styles.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/pdf-to-word" element={<PdfToWord />} />
+        <Route path="/pdf-to-excel" element={<PdfToExcel />} />
+        <Route path="/word-to-pdf" element={<WordToPdf />} />
+        <Route path="/compress-image" element={<ImageCompressor />} />
+        <Route path="/remove-bg" element={<BgRemover />} />
+        <Route path="/lorem-ipsum" element={<LoremIpsumGenerator />} />
+        <Route path="/password-generator" element={<PasswordGenerator />} />
+        <Route path="/unit-converter" element={<UnitConverter />} />
+        <Route path="/currency-converter" element={<CurrencyConverter />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
