@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const PdfToWord = () => {
   const [file, setFile] = useState<File | null>(null);

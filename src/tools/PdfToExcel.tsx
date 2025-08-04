@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const PdfToExcel = () => {
   const [file, setFile] = useState<File | null>(null);

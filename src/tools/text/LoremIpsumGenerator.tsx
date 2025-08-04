@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const LoremIpsumGenerator = () => {
   const [paragraphs, setParagraphs] = useState<number>(3);

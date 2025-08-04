@@ -1,4 +1,4 @@
-﻿import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 const BgRemover = () => {
   const [image, setImage] = useState<string | null>(null);

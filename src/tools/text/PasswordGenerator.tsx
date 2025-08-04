@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const PasswordGenerator = () => {
   const [length, setLength] = useState<number>(12);
